@@ -14,14 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Using Node.js 18
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: 'npm'
-    - run: npm install
-    - run: npm run build
-    
     - name: GCP Authentication
       id: 'auth'
       uses: 'google-github-actions/auth@v2'
